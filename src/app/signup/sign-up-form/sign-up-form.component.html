@@ -8,12 +8,12 @@
     </div>
     <div class="box">
         <input type="mailOrNum" id="mailOrNum" class="field" formControlName="email">
-        <span class="PlaceHolder" id="mailPlaceHolder">Phone</span>
-        <small *ngIf="email.invalid && email.touched" class="text-danger">Email is Required</small>
+        <span class="PlaceHolder" id="mailPlaceHolder">Email</span>
+        <small *ngIf="email.invalid && email.touched" class="text-danger">invalid value</small>
     </div>
 
     <div class="link box">
-        <span role="button" id="swapper" (click)="swap()">Use email instead</span>
+        <span role="button" id="swapper" (click)="swap()">Use phone instead</span>
     </div>
     <div>
         <span class="bigfont">Date of birth</span><br>

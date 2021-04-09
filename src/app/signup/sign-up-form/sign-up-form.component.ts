@@ -11,6 +11,7 @@ export class SignUpFormComponent implements OnInit {
   names: string;
   constructor() { }
   swap() {
+    console.log(this.signup)
     var phone = "Use phone instead";
     var email = "Use email instead";
     console.log("qwertyui")
@@ -19,9 +20,12 @@ export class SignUpFormComponent implements OnInit {
     if (y.innerHTML == email) {
       y.innerHTML = phone
       x.innerHTML = "Email";
+      this.signup['email']=new FormControl(null, [Validators.required, Validators.email])
+
     } else {
       y.innerHTML = email;
       x.innerHTML = "Phone";
+      this.signup['email']=new FormControl(null, [Validators.required, Validators.pattern("[0-9]10")])
     }
   }
   nameFocusIn() {
