@@ -1,0 +1,105 @@
+$base:black;
+$blue:rgb(0, 174, 255);
+$baseText:white;
+.bigfont{
+    font-size:20px;
+    font-weight: bold;
+    color: $baseText;
+}
+
+.field{
+    height: 60px;
+    width: 99%;
+    border: 1px grey solid;
+    background-color: $base;
+    border-radius: 5px;
+    color: $baseText;
+}
+.field:focus{
+    border: 1px $blue solid;
+}
+.box{
+    position: relative;
+    overflow: hidden;
+}
+
+.PlaceHolder{
+    color: gray;
+    position:absolute;
+    top: 20px;
+    left: 5px;
+    height: 0px;
+    display: inline;
+    font-size: large;
+    text-overflow: ellipsis; 
+}
+.PlaceHolderFocus{
+    top: 0px;
+    left: 5px;
+    font-size: small;
+    color: $blue;
+    transition: 200ms;
+}
+.link{
+    color: $blue;
+    text-align: left;
+    margin-top: 10px;
+}
+.link:hover{
+    text-decoration: underline;
+}
+form > div{
+    margin-bottom: 25px;
+}
+.bigfont{
+    font-size:18px;
+    font-weight: bold;
+    color: $baseText;
+}
+.smallfont{
+    font-size:15px;
+    color: gray;
+}
+.DOB{
+    margin-top: 40px;
+    display: flex;
+    column-count: 3;
+    width: 100%;
+    justify-content: space-between;
+}
+.month{
+    height: 50px;
+    width: 250px;
+    border: 1px grey solid;
+    border-radius: 5px; 
+}
+.stayup{
+    position: absolute;
+    top: 0px;
+    left: 5px;
+    font-size: small;
+    color: gray;
+}
+select{
+    margin-top: 0px;
+	height:50px;
+	width:100%;
+    font-size:18px;
+    background-color: $base;
+    color: $baseText;
+}
+
+.day{
+    height: 50px;
+    width: 100px;
+    border: 1px grey solid;
+    border-radius: 5px; 
+    align-self:flex-end;
+}
+
+.year{
+    height: 50px;
+    width: 150px;
+    border: 1px grey solid;
+    border-radius: 5px; 
+}

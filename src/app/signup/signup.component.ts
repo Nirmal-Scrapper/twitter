@@ -10,76 +10,38 @@ export class SignupComponent implements OnInit {
 
   registerForm: FormGroup;
   submitted = false;
-  
+  flow = 1;
+  boxes = ["box1", "box2", "box3", "box4", "box5"]
   constructor() { }
-  swap(){
-    console.log("qwertyui")
-    var y = document.getElementById("swapper");
-    y.innerHTML="Use phone instead"
-    y = document.getElementById("mailPlaceHolder");
-    y.innerHTML="Email";
+  next() {
+    for (var i = 0; i < 4; i++) {
+      var x = document.getElementById(this.boxes[i]);
+      var y = document.getElementById(this.boxes[i + 1]);
+      if (x.classList.contains("block")) {
+        x.classList.remove("block");
+        x.classList.add("none");
+        y.classList.remove("none");
+        y.classList.add("block")
+        return
+      }
+    }
   }
-  nameFocusIn(){
-    console.log("jsdvjhsdvhjg")
-    var y = document.getElementById("namePlaceHolder");
-    y.classList.add("PlaceHolderFocus");
+  back() {
+    for (var i = 4; i > 0; i--) {
+      var x = document.getElementById(this.boxes[i]);
+      var y = document.getElementById(this.boxes[i - 1]);
+      if (x.classList.contains("block")) {
+        x.classList.remove("block");
+        x.classList.add("none");
+        y.classList.remove("none");
+        y.classList.add("block")
+        return
+      }
+    }
   }
-  nameFocusOut(){
-    var y = document.getElementById("namePlaceHolder");
-    y.classList.remove("PlaceHolderFocus");
-  }
-  mailFocusIn(){
-    var y = document.getElementById("mailPlaceHolder");
-    y.classList.add("PlaceHolderFocus");
-  }
-  mailFocusOut(){
-    var y = document.getElementById("mailPlaceHolder");
-    y.classList.remove("PlaceHolderFocus");
-  }
-  nameChange(){
-    var uname= (<HTMLInputElement>document.getElementById("uname"));
-    var y = document.getElementById("namePlaceHolder");
 
-    console.log(uname.value.length,y.classList.contains("stayup"))
-    if(uname.value.length>0){
-      
-      y.classList.add("stayup");
-    }
-    if(uname.value.length==0 && y.classList.contains("stayup")){
-      y.classList.remove("stayup");
-    }
-  }
-  mailChange(){
-    var pass= (<HTMLInputElement>document.getElementById("mailOrNum"));
-    var y = document.getElementById("mailPlaceHolder");
-    if(pass.value.length>0){
-      y.classList.add("stayup");
-    }
-    if(pass.value.length==0 && y.classList.contains("stayup")){
-      y.classList.remove("stayup");
-    }
-  }
   ngOnInit(): void {
-    var day=document.getElementById("day");
-    var year=document.getElementById("year");
-    var append="";
-    for(var i=1;i<32;i++){
-      append+="<option value="+i+">"+i+ "</option>";
-    }
-    day.innerHTML=append;
-    append="";
-    for(var i=2021;i>1900;i--){
-      append+="<option value="+i+">"+i+ "</option>";
-    }
-    year.innerHTML=append;
-    var uname= document.getElementById("uname");
-    var pass= document.getElementById("mailOrNum");
-    uname.addEventListener('focus',this.nameFocusIn);
-    uname.addEventListener('focusout',this.nameFocusOut);
-    pass.addEventListener('focus',this.mailFocusIn);
-    pass.addEventListener('focusout',this.mailFocusOut);
-    uname.addEventListener('change',this.nameChange);
-    pass.addEventListener('change',this.mailChange);
+
   }
 
 }

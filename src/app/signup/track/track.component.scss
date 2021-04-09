@@ -1,0 +1,30 @@
+$base:black;
+$blue:rgb(0, 174, 255);
+$baseText:white;
+.bigfont{
+    font-size:20px;
+    font-weight: bold;
+    color: $baseText;
+}
+.smallfont{
+    font-size:15px;
+    color: gray;
+    width: 90%;
+}
+
+.track{
+    display: flex;
+}
+
+input{
+    height: 20px;
+    width: 20px;
+}
+
+.link{
+    color: $blue;
+}
+
+.link:hover{
+    text-decoration: underline;
+}
