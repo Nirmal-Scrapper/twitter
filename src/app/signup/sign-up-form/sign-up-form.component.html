@@ -1,14 +1,17 @@
 <p class="bigfont">Create your account</p>
-<form class="form">
+<form [formGroup]="signup" class="form">
     <!-- [formGroup]="registerForm" -->
     <div class="box">
         <input type="text" id="uname" class="field" formControlName="name">
         <span class="PlaceHolder" id="namePlaceHolder">Name</span>
+        <small *ngIf="name.invalid && name.touched" class="text-danger">Name is Required</small> 
     </div>
     <div class="box">
         <input type="mailOrNum" id="mailOrNum" class="field" formControlName="email">
         <span class="PlaceHolder" id="mailPlaceHolder">Phone</span>
+        <small *ngIf="email.invalid && email.touched" class="text-danger">Email is Required</small>
     </div>
+
     <div class="link box">
         <span role="button" id="swapper" (click)="swap()">Use email instead</span>
     </div>
@@ -22,7 +25,7 @@
             <div class="box">
                 <div class="dropDown month">
                     <select class="months">
-                        <option disabled="" value=""></option>
+                        
                         <option name="January" value="Jan">January</option>
                         <option name="February" value="Feb">February</option>
                         <option name="March" value="Mar">March</option>

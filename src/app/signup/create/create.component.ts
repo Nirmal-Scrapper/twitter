@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SignUpFormComponent } from '../sign-up-form/sign-up-form.component';
 
 @Component({
   selector: 'app-create',
@@ -49,7 +50,7 @@ export class CreateComponent implements OnInit {
     }
   }
   ngOnInit(): void {
-    var uname = document.getElementById("name");
+    var uname = (<HTMLInputElement>document.getElementById("name"));
     var pass = document.getElementById("contact");
     uname.addEventListener('focus', this.nameFocusIn);
     uname.addEventListener('focusout', this.nameFocusOut);
@@ -57,6 +58,9 @@ export class CreateComponent implements OnInit {
     pass.addEventListener('focusout', this.mailFocusOut);
     uname.addEventListener('change', this.nameChange);
     pass.addEventListener('change', this.mailChange);
+   // console.log(<string><unknown>new SignUpFormComponent().name);
+    //uname.value=<string><unknown>new SignUpFormComponent().name
+    this.nameChange();
   }
 
 }

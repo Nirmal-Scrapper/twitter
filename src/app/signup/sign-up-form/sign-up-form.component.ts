@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-sign-up-form',
@@ -6,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./sign-up-form.component.scss']
 })
 export class SignUpFormComponent implements OnInit {
-
+  signup: FormGroup;
   constructor() { }
   swap() {
     var phone = "Use phone instead";
@@ -17,9 +18,9 @@ export class SignUpFormComponent implements OnInit {
     if (y.innerHTML == email) {
       y.innerHTML = phone
       x.innerHTML = "Email";
-    }else{
-      y.innerHTML=email;
-      x.innerHTML="Phone";
+    } else {
+      y.innerHTML = email;
+      x.innerHTML = "Phone";
     }
   }
   nameFocusIn() {
@@ -62,6 +63,12 @@ export class SignUpFormComponent implements OnInit {
       y.classList.remove("stayup");
     }
   }
+  get name() {
+    return this.signup.get('name');
+  }
+  get email() {
+    return this.signup.get('email');
+  }
   ngOnInit(): void {
     var day = document.getElementById("day");
     var year = document.getElementById("year");
@@ -83,6 +90,10 @@ export class SignUpFormComponent implements OnInit {
     pass.addEventListener('focusout', this.mailFocusOut);
     uname.addEventListener('change', this.nameChange);
     pass.addEventListener('change', this.mailChange);
+    this.signup = new FormGroup({
+      'name': new FormControl(null, Validators.required),
+      'email': new FormControl(null, [Validators.required, Validators.email])
+    });
   }
 
 }
