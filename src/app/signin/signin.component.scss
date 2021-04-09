@@ -90,11 +90,13 @@ img{
     position:absolute;
     top: 12px;
     left: 5px;
-    height: 0px;
+    height: 50%;
     display: inline;
     width: 200px;
-    font-size: large;
+    font-size: 20px;
+    white-space: nowrap; 
     text-overflow: ellipsis; 
+    overflow: hidden;
 }
 
 .PlaceHolderFocus{

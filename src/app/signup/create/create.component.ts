@@ -10,7 +10,7 @@ export class CreateComponent implements OnInit {
 
   constructor() { }
   nameFocusIn() {
-    console.log("jsdvjhsdvhjg")
+   // console.log("jsdvjhsdvhjg")
     var y = document.getElementById("namesPlaceHolder");
     y.classList.add("PlaceHolderFocus");
   }
@@ -59,7 +59,7 @@ export class CreateComponent implements OnInit {
     uname.addEventListener('change', this.nameChange);
     pass.addEventListener('change', this.mailChange);
    // console.log(<string><unknown>new SignUpFormComponent().name);
-    //uname.value=<string><unknown>new SignUpFormComponent().name
+    uname.value=new SignUpFormComponent().getName();
     this.nameChange();
   }
 

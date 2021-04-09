@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import {Location} from '@angular/common';
 @Component({
   selector: 'app-signin',
   templateUrl: './signin.component.html',
@@ -7,8 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SigninComponent implements OnInit {
   
-  constructor() { 
+  constructor(private location:Location) { 
 
+  }
+  signup(){
+    this.location.replaceState("/signup")
+    console.log("vanthuten")
+    var y = document.getElementById("signup");
+    y.style.display="block";
   }
   nameFocusIn(){
     var y = document.getElementById("unamePlaceHolder");

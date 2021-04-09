@@ -8,6 +8,7 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
 })
 export class SignUpFormComponent implements OnInit {
   signup: FormGroup;
+  names: string;
   constructor() { }
   swap() {
     var phone = "Use phone instead";
@@ -24,7 +25,7 @@ export class SignUpFormComponent implements OnInit {
     }
   }
   nameFocusIn() {
-    console.log("jsdvjhsdvhjg")
+    //console.log("jsdvjhsdvhjg")
     var y = document.getElementById("namePlaceHolder");
     y.classList.add("PlaceHolderFocus");
   }
@@ -52,6 +53,7 @@ export class SignUpFormComponent implements OnInit {
     if (uname.value.length == 0 && y.classList.contains("stayup")) {
       y.classList.remove("stayup");
     }
+    this.names = uname.value
   }
   mailChange() {
     var pass = (<HTMLInputElement>document.getElementById("mailOrNum"));
@@ -62,6 +64,9 @@ export class SignUpFormComponent implements OnInit {
     if (pass.value.length == 0 && y.classList.contains("stayup")) {
       y.classList.remove("stayup");
     }
+  }
+  getName(): string {
+    return this.names;
   }
   get name() {
     return this.signup.get('name');
