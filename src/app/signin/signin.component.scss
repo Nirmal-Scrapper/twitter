@@ -1,193 +1,200 @@
-$base:black;
-$blue:rgb(0, 174, 255);
-$baseText:white;
-.signpage{
-    position: relative;
-    height: 100vh;
-    background-color: $base;
+$base: black;
+$blue: rgb(0, 174, 255);
+$baseText: white;
+.signpage {
+  position: relative;
+  height: 100vh;
+  background-color: $base;
 }
-.signin-back{
-    position: relative;
-    height: 100vh;
+.signin-back {
+  position: relative;
+  height: 100vh;
 }
-.signin-back > img{
-    height: 100vh;
+.signin-back > img {
+  height: 100vh;
 }
-.icon-xl{
-    fill: white;
-    position: absolute;
-    top: 30%;
-    height: 35%;
-    width: 35%;
-    max-height: 600px;
-    left: 10%;
+.icon-xl {
+  fill: white;
+  position: absolute;
+  top: 30%;
+  height: 35%;
+  width: 35%;
+  max-height: 600px;
+  left: 10%;
 }
-img{
-    position: absolute;
-    right: 32%;
-    height: 70vh;
+img {
+  position: absolute;
+  right: 32%;
+  height: 70vh;
 }
-.container{
-    background-color:$base;
-    position: absolute;
-    top: 0%;
-    right: 0%;
-    width: 43%;
-    height: 96.3%;
-    padding: 16px;
-    min-width: 600px;
-    display: flex;
-    flex-direction: column;
-    flex-basis: auto;
-}
-
-.login{
-    display: flex;
-    justify-content:flex-start;
-}
-.field{
-    height: 50px;
-    width: 210px;
-    border: 1px grey solid;
-    background-color: $base;
-    border-radius: 5px;
+.container {
+  background-color: $base;
+  position: absolute;
+  top: 0%;
+  right: 0%;
+  width: 43%;
+  height: 96.3%;
+  padding: 16px;
+  min-width: 600px;
+  display: flex;
+  flex-direction: column;
+  flex-basis: auto;
 }
 
-.button{
-    height: 50px;
-    width: 110px;
-    border-radius: 30px;
+.login {
+  display: flex;
+  justify-content: flex-start;
+}
+.field {
+  height: 50px;
+  width: 210px;
+  border: 1px grey solid;
+  background-color: $base;
+  border-radius: 5px;
 }
 
-.loginButton{
-    background-color: $base; 
-    color: $blue;
-    border: 1px $blue solid;
+.button {
+  height: 50px;
+  width: 110px;
+  border-radius: 30px;
 }
 
-.signupButton{
-    background-color: $blue;
-    color: $baseText;
-}
-.signupButton:hover{
-    background-color:rgb(0, 174, 255,0.9);
-}
-.loginButton:hover{
-    background-color:rgb(0, 174, 255,0.1);
-}
-.buttonfont{
-    font-size: medium;
-    font-weight: bold;
-}
-.box{
-    position: relative;
-    overflow: hidden;
-    margin-right: 20px;
+.loginButton {
+  background-color: $base;
+  color: $blue;
+  border: 1px $blue solid;
 }
 
-.PlaceHolder{
-    color: gray;
-    position:absolute;
-    top: 12px;
-    left: 5px;
-    height: 0px;
-    display: inline;
-    width: 200px;
-    font-size: large;
-    text-overflow: ellipsis; 
+.signupButton {
+  background-color: $blue;
+  color: $baseText;
+}
+.signupButton:hover {
+  background-color: rgb(0, 174, 255, 0.9);
+}
+.loginButton:hover {
+  background-color: rgb(0, 174, 255, 0.1);
+}
+.buttonfont {
+  font-size: medium;
+  font-weight: bold;
+}
+.box {
+  position: relative;
+  overflow: hidden;
+  margin-right: 20px;
 }
 
-.PlaceHolderFocus{
-    top: 0px;
-    left: 5px;
-    font-size: small;
-    color: $blue;
-    transition: 200ms;
-}
-.stayup{
-    top: 0px;
-    left: 5px;
-    font-size: small;
-}
-input:focus{
-    border: 1px $blue solid;
-}
-input{
-    color: $baseText;
+.PlaceHolder {
+  color: gray;
+  position: absolute;
+  top: 12px;
+  left: 5px;
+  height: 0px;
+  display: inline;
+  width: 200px;
+  font-size: large;
+  text-overflow: ellipsis;
 }
 
-.footer{
-    width: 100%;
-    background-color: $base;
-    height: 3%;
-    position: fixed;
-    bottom: 0;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    color: gray;
-    padding: 12px 16px 12px 16px;
-    font-size: small;
+.PlaceHolderFocus {
+  top: 0px;
+  left: 5px;
+  font-size: small;
+  color: $blue;
+  transition: 200ms;
+}
+.stayup {
+  top: 0px;
+  left: 5px;
+  font-size: small;
+}
+input:focus {
+  border: 1px $blue solid;
+}
+input {
+  color: $baseText;
 }
 
-a{
-    margin-right: 25px;
+.footer {
+  width: 100%;
+  background-color: $base;
+  height: 3%;
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  color: gray;
+  padding: 12px 16px 12px 16px;
+  font-size: small;
 }
 
-a:hover{
-    text-decoration: underline;
-}
-.nav-section{
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start; 
-    padding: 20px 20px 20px 20px;
-    // background-color: gray;
-    // align-self:center;
-    margin-top: 17vh;
-    height: 500px;
-    width: 500px;
+a {
+  margin-right: 25px;
 }
 
-.icon-m{
-    fill: white;
-    height: 40px;
-    width: 40px;
+a:hover {
+  text-decoration: underline;
+}
+.nav-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 20px 20px 20px 20px;
+  // background-color: gray;
+  // align-self:center;
+  margin-top: 17vh;
+  height: 500px;
+  width: 500px;
 }
 
-.thickfont{
-    font-size:66px;
-    font-weight: bold;
-    color: $baseText;
-    font-stretch: expanded;
+.icon-m {
+  fill: white;
+  height: 40px;
+  width: 40px;
 }
 
-.bigfont{
-    font-size:33px;
-    font-weight: bold;
-    color: $baseText;
+.thickfont {
+  font-size: 66px;
+  font-weight: bold;
+  color: $baseText;
+  font-stretch: expanded;
 }
 
-.nav-but{
-    min-width: calc(77.28px);
-    width: 75%;
-    height: 50px;
-    border: 1px $blue solid;
-    border-radius: 30px;
-    margin-bottom: 15px;
+.bigfont {
+  font-size: 33px;
+  font-weight: bold;
+  color: $baseText;
 }
 
-.link{
-    color: $blue;
-    text-align: center;
-    margin-top: 10px;
+.nav-but {
+  min-width: calc(77.28px);
+  width: 75%;
+  height: 50px;
+  border: 1px $blue solid;
+  border-radius: 30px;
+  margin-bottom: 15px;
+  &:hover {
+    cursor: pointer;
+  }
 }
 
-.link:hover{
-    text-decoration: underline;
+.link {
+  color: $blue;
+  text-align: center;
+  margin-top: 10px;
 }
 
-.form{
-    width: 80%;
-    min-width: 600px;
+.link:hover {
+  text-decoration: underline;
+}
+
+.form {
+  width: 80%;
+  min-width: 600px;
+}
+
+.signup {
+  display: none;
 }
