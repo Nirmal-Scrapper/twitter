@@ -1,15 +1,15 @@
 <p class="bigfont">Create your account</p>
-<form [formGroup]="signup" class="form">
+<form [formGroup]="staticformGroup" class="form">
     <!-- [formGroup]="registerForm" -->
     <div class="box">
         <input type="text" id="uname" class="field" formControlName="name">
         <span class="PlaceHolder" id="namePlaceHolder">Name</span>
-        <small *ngIf="name.invalid && name.touched" class="text-danger">Name is Required</small> 
+        <small *ngIf="staticformGroup.controls['name'].touched && staticformGroup.controls['name'].hasError('required')" class="text-danger">Name is Required</small> 
     </div>
     <div class="box">
         <input type="mailOrNum" id="mailOrNum" class="field" formControlName="email">
         <span class="PlaceHolder" id="mailPlaceHolder">Email</span>
-        <small *ngIf="email.invalid && email.touched" class="text-danger">invalid value</small>
+        <small *ngIf="staticformGroup.controls['email'].touched && staticformGroup.controls['email'].invalid" class="text-danger">invalid value</small>
     </div>
 
     <div class="link box">
@@ -17,14 +17,13 @@
     </div>
     <div>
         <span class="bigfont">Date of birth</span><br>
-        <span class="smallfont">This will not be shown publicly. Confirm your own age, even if this account
-            is for a business, a
-            pet, or something else.</span>
+        <span class="smallfont">This will not be shown publicly. Confirm your own age, even if this account is for a business, a pet, or something else.</span>
 
         <div class="DOB">
             <div class="box">
                 <div class="dropDown month">
-                    <select class="months">
+                    <select class="months" formControlName="month" id="month">
+                        <option class="none"></option>
                         <option name="January" value="Jan">January</option>
                         <option name="February" value="Feb">February</option>
                         <option name="March" value="Mar">March</option>
@@ -40,24 +39,29 @@
                     </select>
                 </div>
                 <span class="stayup" id="monthPlaceHolder">Month</span>
+                <small *ngIf="staticformGroup.controls['month'].touched && staticformGroup.controls['month'].invalid" class="text-danger">invalid value</small>
+
             </div>
 
             <div class="box">
                 <div class="dropDown day">
-                    <select id="day" class="days">
+                    <select id="day" class="days" formControlName="day">
 
                     </select>
                 </div>
                 <span class="stayup" id="dayPlaceHolder">Day</span>
+                <small *ngIf="staticformGroup.controls['day'].touched && staticformGroup.controls['day'].invalid" class="text-danger">invalid value</small>
             </div>
 
             <div class="box">
                 <div class="dropDown year">
-                    <select id="year" class="years">
+                    <select id="year" class="years" formControlName="year">
 
                     </select>
                 </div>
                 <span class="stayup" id="yearPlaceHolder">year</span>
+                <small *ngIf="staticformGroup.controls['year'].touched && staticformGroup.controls['year'].invalid" class="text-danger">invalid value</small>
+
             </div>
         </div>
     </div>

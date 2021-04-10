@@ -2,9 +2,13 @@
     <div class="cont">
         <div class="head">
             <div>
-                <button class="back" id="back" (click)="back()">X</button>
+                <button class="back none" id="back" (click)="back()" >X</button>
             </div>
-            <div class="headdiv">
+            <div class="smallfont none" id="step3"><span>step 3 of 5</span></div>
+            <div class="smallfont none" id="step4"><span>step 4 of 5</span></div>
+            <div class="smallfont none" id="step5"><span>step 5 of 5</span></div>
+
+            <div class="headdiv" id="box-icon">
                 <svg viewBox="0 0 24 24" class="icon-m">
                     <g>
                         <path
@@ -14,7 +18,7 @@
                 </svg>
             </div>
             <div class="headdiv">
-                <button class="nextButton button buttonfont" (click)="next()">
+                <button class="nextButton button buttonfont" (click)="next()" id="next">
                     Next
                 </button>
             </div>

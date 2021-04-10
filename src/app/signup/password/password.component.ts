@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-password',
@@ -6,8 +7,21 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./password.component.scss']
 })
 export class PasswordComponent implements OnInit {
-
+  static password = new FormGroup({
+    'password': new FormControl("", [Validators.required,Validators.pattern("^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$")])
+  });
+  get staticformGroup():FormGroup{
+    return PasswordComponent.password;
+  }
   constructor() { }
+  toggle(){
+    var x = (<HTMLInputElement>document.getElementById("pass"));
+    if (x.type === "password") {
+      x.type = "text";
+    } else {
+      x.type = "password";
+    }
+  }
   otpFocusIn() {
     var y = document.getElementById("passwordPlaceHolder");
     y.classList.add("PlaceHolderFocus");
@@ -24,6 +38,11 @@ export class PasswordComponent implements OnInit {
     }
     if (pass.value.length == 0 && y.classList.contains("stayup")) {
       y.classList.remove("stayup");
+    }
+  }
+  validate():boolean{
+    if(PasswordComponent.password.invalid){
+      return true;
     }
   }
   ngOnInit(): void {

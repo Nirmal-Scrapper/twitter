@@ -1,7 +1,8 @@
 <p class="bigfont">We sent you a code</p>
 <p class="smallfont">Enter it below to verify 8903144840.</p>
-<div class="box">
+<div class="box" [formGroup]="staticformGroup">
     <input type="text" id="otp" class="field" formControlName="otp">
     <span class="PlaceHolder" id="otpPlaceHolder">Verfication code</span>
+    <small *ngIf="staticformGroup.controls['otp'].invalid" class="text-danger">invalid value</small>
 </div>
 <a class="link">Didn't receive a text?</a>

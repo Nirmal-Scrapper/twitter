@@ -70,6 +70,8 @@ $baseText:white;
 .buttonfont{
     font-size: medium;
     font-weight: bold;
+    text-align: center;
+    line-height: 40px;
 }
 .nav-but{
     min-width: calc(77.28px);
@@ -78,4 +80,13 @@ $baseText:white;
     border: 1px $blue solid;
     border-radius: 30px;
     margin-bottom: 15px;
+    //justify-content: center;
 }
+
+.text-danger{
+    color: rgb(233, 91, 91);
+}
+.butcent{
+    vertical-align: middle;
+}
+

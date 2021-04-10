@@ -57,9 +57,12 @@ $baseText:white;
 .nextButton:hover{
     background-color:rgb(0, 174, 255,0.9);
 }
-
-
-
+.smallfont{
+    font-size:20px;
+    color: $baseText;
+    margin-left: 100px;
+    width: 150px;
+}
 .body{
     padding: 0px 20px 0px 20px;
 }
@@ -72,8 +75,22 @@ $baseText:white;
 
 .back{
     background-color: $base;
-    color: $baseText;
+    color: $blue;
     border: 0px;
     font-size: large;
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+}
+.back:hover{
+    background-color:rgba(64, 192, 252, 0.096);
 }
 
+@media(max-width:650px) {
+    .cont{
+        width: 100vw;
+        height: 100vh;
+        min-width: 300px;
+    }
+
+}
