@@ -30,7 +30,7 @@ $baseText:white;
     margin-top: 10px;
 }
 .headdiv{
-    width: 49%;
+    width: 50%;
     display: flex;
     justify-content: flex-end;
 }
@@ -53,6 +53,8 @@ $baseText:white;
     background-color: $blue;
     color: $baseText;
     border: 1px $blue solid;
+    opacity: 0.3;
+    justify-self:flex-end;
 }
 .nextButton:hover{
     background-color:rgb(0, 174, 255,0.9);
@@ -60,8 +62,9 @@ $baseText:white;
 .smallfont{
     font-size:20px;
     color: $baseText;
-    margin-left: 100px;
+    margin-right: 100px;
     width: 150px;
+    font-weight: bold;
 }
 .body{
     padding: 0px 20px 0px 20px;

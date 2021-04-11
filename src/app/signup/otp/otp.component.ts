@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { SignUpFormComponent } from '../sign-up-form/sign-up-form.component';
 
 @Component({
   selector: 'app-otp',
@@ -13,6 +14,9 @@ export class OtpComponent implements OnInit {
   constructor() { }
   get staticformGroup():FormGroup{
     return OtpComponent.otp;
+  }
+  get contact():any{
+    return new SignUpFormComponent().email;
   }
   otpFocusIn() {
     console.log("jsdvjhsdvhjg")

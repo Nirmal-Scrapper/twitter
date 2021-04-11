@@ -58,7 +58,7 @@ export class SignupComponent implements OnInit {
     }
     else if (box == "box2") {
       console.log("box1")
-      if (new SignUpFormComponent().validate()) {
+      if (new SignUpFormComponent().validate) {
         return true
       }
       if (document.getElementById("box-icon").classList.contains("none")) {
